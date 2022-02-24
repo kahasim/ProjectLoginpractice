@@ -1,0 +1,122 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+    background-color {
+        color: #11ABC1;
+    }
+
+    body {
+        font-family: "Lato", sans-serif;
+        background-color: #11ABC1;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 25px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    #main {
+        transition: margin-left .5s;
+        padding: 20px;
+    }
+</style>
+
+<head>
+    <title>Auto Technician</title>
+</head>
+
+
+<!-- Use any element to open the sidenav -->
+
+<span style="font-size: 20px" ; onclick="openNav()"><button>Side Menu Button</button></span>
+<div id="main">
+    <h1>
+        Technicians
+    </h1>
+
+    <form action="/action_page.php">
+        <label for="Depart">First Name: </label>
+        <input type="text" id="depart" name="depart"><br><br>
+        <label for="Destin">Last name: </label>
+        <input type="text" id="Destin" name="Destin"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+
+    <br>
+    <br>
+
+
+
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+
+</div>
+
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="btn" onclick="closeNav()">Close</a>
+    <a asp-action="Index">Back</a>
+    <a href="#">Services</a>
+    <a asp-action="Create">Create</a>
+    <a asp-area="" asp-controller="Departments" asp-action="Index">Departments</a>
+
+</div>
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+
+
+<script>
+       function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+        function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+</script>
